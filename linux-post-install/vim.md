@@ -10,7 +10,7 @@
   * lla
 * Create file `~/.vim/vimrc` and put the most wanted configs via defaults.vim.
 * Configure the sets in vimrc file.
-* Copy the plugins in $VIMRUNTIME/ftplugin too ~/.vim/plugin/ftplugin
+* Copy the plugins in $VIMRUNTIME/ftplugin to ~/.vim/plugin/ftplugin
 
 Inside the file `~/.bashrc` add the custom $PS1 to shorten the cmd line
 and restarts the shell to load the configs.
@@ -42,8 +42,10 @@ alias lla="ls -lA"
 alias cl="clear"
 ```
 
-Inside the `vimrc` get the most wanted configs by default
+Inside the `vimrc` get the most wanted configs by default.
 
 ```bash
 source $VIMRUNTIME/defaults.vim
 ```
+
+Check the `vimrc` file with my configs (must be outdated...sorry :))

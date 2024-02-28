@@ -2,8 +2,8 @@
 
 ### Config the new user
 
-username: foo
-password: 123
+username: foo  
+password: 123  
 
 ### How change the hostname (WSL2)
 https://datmt.com/linux/change-ubuntu-wsl2-hostname-permanently/
@@ -29,15 +29,15 @@ ssh git@github.com
 
 ### Install ASDF Package Manager
 
-Search for `asdf github` in the internet.
-https://github.com/asdf-vm/asdf
-Following the install steps.
+Search for `asdf github` in the internet.  
+<https://github.com/asdf-vm/asdf>  
+Following the install steps.  
 
 ### Config aliases in the ~/.bashrc file
 
-Update the `~/.bashrc` file or create a `~/.bash_aliases` file.
+Update the `~/.bashrc` file or create a `~/.bash_aliases` file.  
 I choose personally to create the `~/.bash_aliases` to store all additional
-alias.
+alias.  
 
 ```bash
 # .bashrc
