@@ -40,9 +40,11 @@ I choose personally to create the `~/.bash_aliases` to store all additional
 alias.
 
 ```bash
+# .bashrc
 # Optional, turn terminal like vim
 set -o vi
 
+# .bash_aliases
 alias cl=clear
 ```
 
