@@ -1,1 +1,0 @@
-/home/tuf/.vim/vim.md
