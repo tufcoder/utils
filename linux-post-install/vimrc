@@ -1,0 +1,89 @@
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
+" Configure sets
+set nocompatible
+syntax on
+filetype plugin indent on
+set encoding=utf-8
+set backspace=indent,eol,start
+set mouse=a
+set title
+set number
+set relativenumber
+set belloff=all
+set nobackup
+set noswapfile
+set confirm
+set hidden
+set splitbelow
+set splitright
+set undodir=~/.vim/undodir
+set undofile
+set scrolloff=2
+" set cursorline
+set autoindent
+set smartindent
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smartcase
+set incsearch
+set ignorecase
+set hls
+set nowrap
+set linebreak
+set nolist
+set listchars=tab:>-,space:.,trail:◀,eol:↲
+" set fillchars=vert:│,fold:-,eob:~,lastline:@
+set laststatus=2
+set wildmenu
+set wildmode=longest,full
+" set wildoptions=pum   " pum with problems wsl2
+" set complete+=kspell
+" set completeopt=menuone,longest
+" set shortmess+=c
+
+set spelllang=en,pt_br
+set nospell
+
+colorscheme default
+
+hi Normal guibg=NONE ctermbg=NONE
+" CursorLine color: AliceBlue(246)
+" hi CursorLine ctermbg=246
+" hi CursorColumn ctermbg=246
+hi Visual ctermbg=246
+" hi Comment cterm=italic gui=italic
+
+" Mappings
+map <F3> :set wrap!<CR>
+map <F4> :term<CR><C-w>:resize 10<CR>
+map <F5> :term %:p<CR>
+map <F6> :set list!<CR>
+map <F7> :set rnu!<CR>
+
+let mapleader = " "
+map <leader>w :w<CR>
+map <leader>x :x<CR>
+map <leader>q :q<CR>
+map <leader>, :bn<CR>
+map <leader>. :bp<CR>
+map <leader>bn :enew<CR>
+map <leader>bd :bd<CR>
+map <silent> <leader>hh :let @/ = ""<CR>
+
+inoremap `` ``<LEFT>
+inoremap '' ''<LEFT>
+inoremap "" ""<LEFT>
+inoremap () ()<LEFT>
+inoremap [] []<LEFT>
+inoremap {} {}<LEFT>
+inoremap <> <><LEFT>
+
+" Create the variable $RCPATH
+let $RCPATH = "~/.vim/"
+
+" Load the status bar in $RCPATH file
+source $RCPATH/statusbar.vim
