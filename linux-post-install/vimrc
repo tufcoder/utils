@@ -61,5 +61,5 @@ hi Visual ctermbg=246
 let $RCPATH = "~/.vim/"
 
 " Load the status bar in $RCPATH file
-source $RCPATH/statusbar.vim
-source $RCPATH/mappings.vim
+execute "source ".$RCPATH.fnameescape("statusbar.vim")
+execute "source ".$RCPATH.fnameescape("mappings.vim")
