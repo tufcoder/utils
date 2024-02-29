@@ -48,4 +48,4 @@ Inside the `vimrc` get the most wanted configs by default.
 source $VIMRUNTIME/defaults.vim
 ```
 
-Check the `vimrc` file with my configs (must be outdated...sorry :))
+Check the `vimrc` file with my configs (could be outdated...sorry :))
