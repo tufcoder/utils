@@ -49,6 +49,7 @@ set wildmode=longest,full
 " set shortmess+=c
 set spelllang=en,pt_br
 set nospell
+set foldmethod=marker
 
 " Load plugins with vim-plug
 call plug#begin($RCPATH.'/plugged')
