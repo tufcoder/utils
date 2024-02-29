@@ -1,3 +1,6 @@
+" Create the variable $RCPATH
+let $RCPATH = "~/.vim/"
+
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
@@ -44,11 +47,19 @@ set wildmode=longest,full
 " set complete+=kspell
 " set completeopt=menuone,longest
 " set shortmess+=c
-
 set spelllang=en,pt_br
 set nospell
 
-colorscheme default
+" Load plugins with vim-plug
+call plug#begin($RCPATH.'/plugged')
+
+Plug 'srcery-colors/srcery-vim'     " https://github.com/srcery-colors/srcery-terminal
+Plug 'AxolotlC/Fox.vim'             " https://github.com/Pougher/Fox.vim
+
+call plug#end()
+
+" set background=dark   " with problems in wsl2
+" colorscheme srcery
 
 hi Normal guibg=NONE ctermbg=NONE
 " CursorLine color: AliceBlue(246)
@@ -57,9 +68,6 @@ hi Normal guibg=NONE ctermbg=NONE
 hi Visual ctermbg=246
 " hi Comment cterm=italic gui=italic
 
-" Create the variable $RCPATH
-let $RCPATH = "~/.vim/"
-
-" Load the status bar in $RCPATH file
+" Load additional configuration files
 execute "source ".$RCPATH.fnameescape("statusbar.vim")
 execute "source ".$RCPATH.fnameescape("mappings.vim")
