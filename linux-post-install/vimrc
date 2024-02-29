@@ -50,6 +50,7 @@ set wildmode=longest,full
 set spelllang=en,pt_br
 set nospell
 set foldmethod=marker
+set autoread
 
 " Load plugins with vim-plug
 call plug#begin($RCPATH.'/plugged')
