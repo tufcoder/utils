@@ -54,6 +54,8 @@ set spelllang=en,pt_br
 set nospell
 set foldmethod=marker
 set autoread
+set colorcolumn=90
+set noshowmode
 
 " Load plugins with vim-plug
 call plug#begin($RCPATH.'/plugged')
@@ -68,5 +70,5 @@ colorscheme srcery
 
 " Load additional configuration files
 execute "source ".$RCPATH.fnameescape("customcolors.vim")
-execute "source ".$RCPATH.fnameescape("statusbar.vim")
+execute "source ".$RCPATH.fnameescape("statusline.vim")
 execute "source ".$RCPATH.fnameescape("mappings.vim")
