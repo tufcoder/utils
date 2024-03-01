@@ -6,6 +6,9 @@ source $VIMRUNTIME/defaults.vim
 
 " Configure sets
 set nocompatible
+if has('termguicolors')
+   set termguicolors
+endif
 syntax on
 filetype plugin indent on
 set encoding=utf-8
@@ -39,14 +42,14 @@ set nowrap
 set linebreak
 set nolist
 set listchars=tab:>-,space:.,trail:◀,eol:↲
-" set fillchars=vert:│,fold:-,eob:~,lastline:@
+" set fillchars=vert:│,fold:\ ,eob:~,lastline:@
 set laststatus=2
 set wildmenu
 set wildmode=longest,full
 " set wildoptions=pum   " pum with problems wsl2
-" set complete+=kspell
-" set completeopt=menuone,longest
-" set shortmess+=c
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c
 set spelllang=en,pt_br
 set nospell
 set foldmethod=marker
@@ -61,15 +64,9 @@ Plug 'AxolotlC/Fox.vim'             " https://github.com/Pougher/Fox.vim
 call plug#end()
 
 " set background=dark   " with problems in wsl2
-" colorscheme srcery
-
-hi Normal guibg=NONE ctermbg=NONE
-" CursorLine color: AliceBlue(246)
-" hi CursorLine ctermbg=246
-" hi CursorColumn ctermbg=246
-hi Visual ctermbg=246
-" hi Comment cterm=italic gui=italic
+colorscheme srcery
 
 " Load additional configuration files
+execute "source ".$RCPATH.fnameescape("customcolors.vim")
 execute "source ".$RCPATH.fnameescape("statusbar.vim")
 execute "source ".$RCPATH.fnameescape("mappings.vim")
