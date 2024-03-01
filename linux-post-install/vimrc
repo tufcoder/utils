@@ -27,7 +27,7 @@ set splitright
 set undodir=~/.vim/undodir
 set undofile
 set scrolloff=2
-" set cursorline
+set cursorline
 set autoindent
 set smartindent
 set expandtab
@@ -42,11 +42,10 @@ set nowrap
 set linebreak
 set nolist
 set listchars=tab:>-,space:.,trail:◀,eol:↲
-" set fillchars=vert:│,fold:\ ,eob:~,lastline:@
+set fillchars=vert:│
 set laststatus=2
 set wildmenu
 set wildmode=longest,full
-" set wildoptions=pum   " pum with problems wsl2
 set complete+=kspell
 set completeopt=menuone,longest
 set shortmess+=c
