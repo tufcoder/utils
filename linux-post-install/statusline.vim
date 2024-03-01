@@ -12,27 +12,16 @@ augroup ModeEvents
 augroup end
 
 function! ActiveStatusLine()
-	let g:currentmode={
-	    \ 'n'  : 'Normal',
-	    \ 'no' : 'Normal-Operator Pending',
-	    \ 'v'  : 'Visual',
-	    \ 'V'  : 'V-Line',
-        \ '[U+0016]' : 'V-Block',
-	    \ 's'  : 'Select',
-	    \ 'S'  : 'S-Line',
-        \ '[U+0013]' : 'S-Block',
-	    \ 'i'  : 'Insert',
-	    \ 'R'  : 'Replace',
-	    \ 'Rv' : 'V-Replace',
-	    \ 'c'  : 'Command',
-	    \ 'cv' : 'Vim Ex',
-	    \ 'ce' : 'Ex',
-	    \ 'r'  : 'Prompt',
-	    \ 'rm' : 'More',
-	    \ 'r?' : 'Confirm',
-	    \ '!'  : 'Shell',
-	    \ 't'  : 'Terminal'
-	    \}
+    let g:currentmode={
+       \ 'n'  : 'NORMAL ',
+       \ 'v'  : 'VISUAL ',
+       \ 'V'  : 'V-Line ',
+       \ "\<C-V>" : 'V-Block ',
+       \ 'i'  : 'INSERT ',
+       \ 'R'  : 'Replace',
+       \ 'Rv' : 'V-Replace ',
+       \ 'c'  : 'Command ',
+       \}
 
 	set statusline=%0*\ %{toupper(g:currentmode[mode()])}
 	set statusline+=\ %1*\ [%n]\ %t%{&modified!=''?'\ \|\ +':''}
