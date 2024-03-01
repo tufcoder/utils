@@ -1,0 +1,38 @@
+# Additional configs.
+# I choose to put those additional configs in a separated file.
+# This file is a link to /tufcoder/utils/linux-post-install/.bash_configs
+# Uncomment the code bellow and append in the end of .bashrc
+
+# if [ -f ~/.bash_configs ]; then
+#     . ~/.bash_configs
+# fi
+
+# My custom configs
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+# bash parameter completion for the dotnet CLI
+function _dotnet_bash_complete()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}" IFS=$'\n' # On Windows you may need to use use IFS=$'\r\n'
+  local candidates
+
+  read -d '' -ra candidates < <(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)
+
+  read -d '' -ra COMPREPLY < <(compgen -W "${candidates[*]:-}" -- "$cur")
+}
+
+complete -f -F _dotnet_bash_complete dotnet
+
+# Edit cmd line to be like "user@~$ (master)"
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\$\[\033[36m\]`__git_ps1`\[\033[0m\] '
+
+# To use the same terminal colors in a TMUX session
+export TERM="xterm-256color"
+
+# Configs for ASDF Package/Version Manager
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+# Config after install Rust to use Cargo (ttyper to practice typing)
+. "$HOME/.cargo/env"
