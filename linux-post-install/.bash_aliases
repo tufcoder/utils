@@ -11,13 +11,12 @@ alias ba="vim $HOME/.bash_aliases"
 # bash_configs
 alias bc="vim $HOME/.bash_configs"
 
-# terminal
-alias lla="ls -lAF"
-alias cl="clear"
 # some more ls aliases (from .bashrc)
-alias ll='ls -alF'
+alias ll='ls -lF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lla="ls -lAF"
+alias cl="clear"
 
 # python3
 alias python="python3"
