@@ -64,7 +64,6 @@ Plug 'AxolotlC/Fox.vim'             " https://github.com/Pougher/Fox.vim
 
 call plug#end()
 
-" set background=dark   " with problems in wsl2
 colorscheme srcery
 
 " Load additional configuration files
