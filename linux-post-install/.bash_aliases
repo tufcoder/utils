@@ -12,9 +12,9 @@ alias ba="vim $HOME/.bash_aliases"
 alias bc="vim $HOME/.bash_configs"
 
 # some more ls aliases (from .bashrc)
-alias ll='ls -lF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll="ls -lF"
+alias la="ls -A"
+alias l="ls -CF"
 alias lla="ls -lAF"
 alias cl="clear"
 
