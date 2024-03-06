@@ -21,6 +21,8 @@ function! ActiveStatusLine()
        \ 'R'  : 'Replace',
        \ 'Rv' : 'V-Replace ',
        \ 'c'  : 'Command ',
+       \ 't'  : 'Terminal-Job',
+       \ 'nt'  : 'Terminal-Normal',
        \}
 
 	set statusline=%0*\ %{toupper(g:currentmode[mode()])}
