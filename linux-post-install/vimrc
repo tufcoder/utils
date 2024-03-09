@@ -19,6 +19,9 @@ set number
 set relativenumber
 set belloff=all
 set nobackup
+set nowritebackup
+set updatetime=300
+set signcolumn=yes
 set noswapfile
 set confirm
 set hidden
@@ -61,6 +64,7 @@ call plug#begin($RCPATH.'/plugged')
 
 Plug 'srcery-colors/srcery-vim'     " https://github.com/srcery-colors/srcery-terminal
 Plug 'AxolotlC/Fox.vim'             " https://github.com/Pougher/Fox.vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (recommended)
 
 call plug#end()
 
@@ -70,3 +74,4 @@ colorscheme srcery
 execute "source ".$RCPATH.fnameescape("customcolors.vim")
 execute "source ".$RCPATH.fnameescape("statusline.vim")
 execute "source ".$RCPATH.fnameescape("mappings.vim")
+execute "source ".$RCPATH.fnameescape("coc-config.vim")

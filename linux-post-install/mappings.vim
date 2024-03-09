@@ -6,11 +6,13 @@ map <F7> :set rnu!<CR>
 
 let mapleader = " "
 map <leader>w :w<CR>
-map <leader>x :x<CR>
 map <leader>q :q<CR>
+map <leader>x :x<CR>
 map <leader>, :bn<CR>
 map <leader>. :bp<CR>
+map <leader>wa :wa<CR>
 map <leader>bn :enew<CR>
+map <leader>bv :vnew<CR>
 map <leader>bd :bd<CR>
 map <silent> <leader>hh :let @/ = ""<CR>
 
@@ -21,3 +23,4 @@ inoremap () ()<LEFT>
 inoremap [] []<LEFT>
 inoremap {} {}<LEFT>
 inoremap <> <><LEFT>
+inoremap ** **<LEFT>
