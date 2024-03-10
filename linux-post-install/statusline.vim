@@ -25,7 +25,7 @@ function! ActiveStatusLine()
        \ 'nt'  : 'Terminal-Normal',
        \}
 
-	set statusline=%0*\ %{toupper(g:currentmode[mode()])}
+    set statusline=%0*\ %{toupper(mode())}
 	set statusline+=\ %1*\ [%n]\ %t%{&modified!=''?'\ \|\ +':''}
 
 	set statusline+=\ %2*%=
