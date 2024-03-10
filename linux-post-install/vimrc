@@ -59,18 +59,8 @@ set autoread
 set colorcolumn=90
 set noshowmode
 
-" Load plugins with vim-plug
-call plug#begin($RCPATH.'/plugged')
-
-Plug 'srcery-colors/srcery-vim'     " https://github.com/srcery-colors/srcery-terminal
-Plug 'AxolotlC/Fox.vim'             " https://github.com/Pougher/Fox.vim
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (recommended)
-
-call plug#end()
-
-colorscheme srcery
-
 " Load additional configuration files
+execute "source ".$RCPATH.fnameescape("plugins.vim")
 execute "source ".$RCPATH.fnameescape("customcolors.vim")
 execute "source ".$RCPATH.fnameescape("statusline.vim")
 execute "source ".$RCPATH.fnameescape("mappings.vim")
