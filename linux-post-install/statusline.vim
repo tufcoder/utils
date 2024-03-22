@@ -1,14 +1,14 @@
-hi statusline gui=bold guibg=#98C379 guifg=#101120
-hi statuslinenc gui=NONE cterm=NONE guibg=#3E4452 guifg=#B0B1C0
+hi statusline gui=bold guibg=#658e48 guifg=#2a2b3d
+hi statuslinenc gui=NONE cterm=NONE guibg=#5f6060 guifg=#B0B1C0
 
 augroup ModeEvents
 	autocmd!
-	au InsertEnter * hi statusline guibg=#61AFEF
-	au InsertLeavePre * hi statusline guibg=#98C379
-	au ModeChanged *:[vV\x16]* hi statusline guibg=#C678DD
-	au Modechanged [vV\x16]*:* hi statusline guibg=#98C379
-	au ModeChanged *:[R]* hi statusline guibg=#EB6E6E
-	au ModeChanged [R]* hi statusline guibg=#98C379
+	au InsertEnter * hi statusline guibg=#3588cc
+	au InsertLeavePre * hi statusline guibg=#658e48
+	au ModeChanged *:[vV\x16]* hi statusline guibg=#b321e0
+	au Modechanged [vV\x16]*:* hi statusline guibg=#658e48
+	au ModeChanged *:[R]* hi statusline guibg=#bf3f3f
+	au ModeChanged [R]* hi statusline guibg=#658e48
 augroup end
 
 function! ActiveStatusLine()
@@ -36,7 +36,7 @@ function! ActiveStatusLine()
 	set statusline+=\ %1*\ %p%%\ %0*\ \ %l:%c\ \
 
 	hi User1 gui=NONE cterm=NONE guifg=#b0b1c0 guibg=#3E4452
-	hi User2 gui=NONE cterm=NONE guifg=#b0b1c0 guibg=#2C324D
+	hi User2 gui=NONE cterm=NONE guifg=#b0b1c0 guibg=#35363d
 endfunction
 
 call ActiveStatusLine()

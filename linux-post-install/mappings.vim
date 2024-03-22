@@ -1,6 +1,5 @@
 map <F3> :set wrap!<CR>
 map <F4> :term<CR><C-w>:resize 10<CR>
-map <F5> :term %:p<CR>
 map <F6> :set list!<CR>
 map <F7> :set rnu!<CR>
 
