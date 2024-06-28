@@ -33,6 +33,7 @@ alias vi="vim -u NONE"
 alias vrc="vim $HOME/.vim/vimrc"
 alias brc="vim $HOME/.bashrc"
 alias ba="vim $HOME/.bash_aliases"
+alias bc="vim $HOME/.bash_configs"
 
 # terminal
 alias ll='ls -alF'
