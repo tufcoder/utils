@@ -4,13 +4,16 @@ let $RCPATH = "~/.vim/"
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-" Configure sets
-set nocompatible
 if has('termguicolors')
    set termguicolors
 endif
+
 syntax on
+
 filetype plugin indent on
+
+" Configure sets
+set nocompatible
 set encoding=utf-8
 set backspace=indent,eol,start
 set mouse=a

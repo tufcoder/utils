@@ -17,6 +17,8 @@ alias la="ls -A"
 alias l="ls -CF"
 alias lla="ls -lAF"
 alias cl="clear"
+alias lr="ls -CFR"
+alias lar="ls -AR"
 
 # python3
 alias python="python3"
