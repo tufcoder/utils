@@ -1,3 +1,4 @@
+map <F2> :Lexplore<CR><C-w>:vertical resize 30<CR>
 map <F3> :set wrap!<CR>
 map <F4> :term<CR><C-w>:resize 10<CR>
 map <F6> :set list!<CR>

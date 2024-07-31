@@ -12,13 +12,13 @@ alias ba="vim $HOME/.bash_aliases"
 alias bc="vim $HOME/.bash_configs"
 
 # some more ls aliases (from .bashrc)
-alias ll="ls -lF"
-alias la="ls -A"
-alias l="ls -CF"
-alias lla="ls -lAF"
 alias cl="clear"
-alias lr="ls -CFR"
-alias lar="ls -AR"
+alias ll="ls -lFh"
+alias la="ls -Ah"
+alias l="ls -CFh"
+alias lla="ls -lAFh"
+alias lr="ls -CFRh"
+alias lar="ls -ARh"
 
 # python3
 alias python="python3"
