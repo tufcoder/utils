@@ -61,6 +61,7 @@ set foldmethod=marker
 set autoread
 set colorcolumn=90
 set noshowmode
+set textwidth=80
 
 " Load additional configuration files
 execute "source ".$RCPATH.fnameescape("plugins.vim")
@@ -68,6 +69,3 @@ execute "source ".$RCPATH.fnameescape("customcolors.vim")
 execute "source ".$RCPATH.fnameescape("statusline.vim")
 execute "source ".$RCPATH.fnameescape("mappings.vim")
 execute "source ".$RCPATH.fnameescape("coc-config.vim")
-
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear

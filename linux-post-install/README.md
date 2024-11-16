@@ -49,4 +49,4 @@ set -o vi
 alias cl=clear
 ```
 
-Check **`vim.md`** file to more detailed information.
+Check **`dotfiles/.vim/vim.md`** file to more detailed information.

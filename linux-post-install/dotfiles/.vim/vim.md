@@ -1,4 +1,4 @@
-# FIRST CONFIG FILES
+# Config Files ⚙️
 
 * Edit `~/.bashrc` to add custom PS1.
 * Create file `~/.bash_aliases` to store common alias. Add more if needed.
@@ -18,7 +18,7 @@ and restarts the shell to load the configs.
 ```bash
 # Using WSL2
 # Sets $PS1 to a short display
-# i.g. "tuf@~$ " means user tuf at home dir (also /home/tuf)
+# e.g. "tuf@~$ " means user tuf at home dir (also /home/tuf)
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\$ '
 
 # Outside WSL2 this works for me
@@ -49,4 +49,4 @@ Inside the `vimrc` get the most wanted configs by default.
 source $VIMRUNTIME/defaults.vim
 ```
 
-Check the `vimrc` file with my configs (could be outdated...sorry :))
+Check the `vimrc` file with my configs (could be outdated...sorry 😁)
