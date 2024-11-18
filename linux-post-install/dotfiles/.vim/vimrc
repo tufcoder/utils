@@ -43,7 +43,7 @@ set softtabstop=4
 set shiftwidth=4
 set smartcase
 set ignorecase
-set nohlsearch
+set hlsearch
 set incsearch
 set nowrap
 set linebreak
@@ -61,10 +61,11 @@ set nospell
 set foldmethod=marker
 set autoread
 set noshowmode
+set grepprg=rg\ --vimgrep\ --follow\ --no-messages
 
 " Load additional configuration files
 execute "source ".$RCPATH.fnameescape("settings/plugins.vim")
+execute "source ".$RCPATH.fnameescape("settings/mappings.vim")
 execute "source ".$RCPATH.fnameescape("settings/customcolors.vim")
 execute "source ".$RCPATH.fnameescape("settings/statusline.vim")
-execute "source ".$RCPATH.fnameescape("settings/mappings.vim")
 execute "source ".$RCPATH.fnameescape("settings/coc-config.vim")

@@ -16,6 +16,18 @@ map <leader>bv :vnew<CR>
 map <leader>bd :bd<CR>
 map <silent> <leader>hh :let @/ = ""<CR>
 
+" Configs using fzf.vim
+nnoremap <leader>of :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>f :Rg<CR>
+nnoremap <leader>/ :BLines<CR>
+nnoremap <leader>' :Marks<CR>
+nnoremap <leader>g :Commits<CR>
+nnoremap <leader>H :Helptags<CR>
+nnoremap <leader>ht :History<CR>
+nnoremap <leader>h: :History:<CR>
+nnoremap <leader>h/ :History/<CR>
+
 inoremap `` ``<LEFT>
 inoremap '' ''<LEFT>
 inoremap "" ""<LEFT>
