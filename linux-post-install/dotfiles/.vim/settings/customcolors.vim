@@ -2,10 +2,10 @@
 hi Normal guibg=NONE ctermbg=NONE
 
 " Cursor line
-hi CursorLine guibg=#5f6060
+hi CursorLine guibg=#4f5151
 
 " Cursor column
-hi ColorColumn guibg=#5f6060
+hi ColorColumn guibg=#4f5151
 
 " Comments in italic
 " hi Comment cterm=italic gui=italic

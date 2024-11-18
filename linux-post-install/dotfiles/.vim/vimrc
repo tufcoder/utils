@@ -25,6 +25,7 @@ set nobackup
 set nowritebackup
 set updatetime=300
 set signcolumn=yes
+set colorcolumn=80
 set noswapfile
 set confirm
 set hidden
@@ -41,9 +42,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smartcase
-set incsearch
 set ignorecase
-set hls
+set nohlsearch
+set incsearch
 set nowrap
 set linebreak
 set nolist
@@ -59,9 +60,7 @@ set spelllang=en,pt_br
 set nospell
 set foldmethod=marker
 set autoread
-set colorcolumn=90
 set noshowmode
-set textwidth=80
 
 " Load additional configuration files
 execute "source ".$RCPATH.fnameescape("settings/plugins.vim")
