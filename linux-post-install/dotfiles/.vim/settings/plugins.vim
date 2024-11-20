@@ -9,6 +9,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (recommende
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+Plug 'mattn/emmet-vim'
+
 let g:coc_global_extesions = [
             \ 'coc-tsserver'
             \ ]
