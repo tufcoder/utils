@@ -19,6 +19,9 @@ alias l="ls -CFh"
 alias lla="ls -lAFh"
 alias lr="ls -CFRh"
 alias lar="ls -ARh"
+alias lt="ls -lth"
+alias lta="ls -Aht"
+alias llta="ls -lAht"
 
 # python3
 alias python="python3"
