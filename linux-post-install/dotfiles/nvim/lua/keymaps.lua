@@ -42,3 +42,5 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Renomear Símbol
 -- Abre a janela flutuante do erro atual instantaneamente
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Mostrar Detalhes do Erro" })
 
+-- Criar nova aba com o terminal
+vim.keymap.set('n', '<leader>tt', '<cmd>tabnew | terminal<CR>', { desc = 'Abrir terminal em nova aba' })

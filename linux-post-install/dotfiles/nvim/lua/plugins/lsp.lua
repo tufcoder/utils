@@ -37,6 +37,8 @@ return {
         vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Mostrar Informações" })
         vim.keymap.set("n", "[d", vim.diagnostic.goto_next, { desc = "Próximo Erro" })
         vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, { desc = "Erro Anterior" })
+        vim.keymap.set("n", "gy", vim.lsp.buf.implementation, { buffer = bufnr, desc = "Ir para implementação" })
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = bufnr, desc = "Ver referências" })
       end
 
       require("mason-lspconfig").setup({
