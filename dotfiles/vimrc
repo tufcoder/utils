@@ -1,0 +1,26 @@
+source $VIMRUNTIME/defaults.vim
+
+set number
+set relativenumber
+set mouse=a
+set belloff=all
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
+set smartindent
+set nowritebackup
+set noswapfile
+set termguicolors
+
+" industry, murphy, retrobox, slate, sorbet, torte
+colorscheme murphy
+
+call plug#begin('~/.vim/plugged')
+	Plug 'sheerun/vim-polyglot'						" Support most languages (syntax highlighting)
+	Plug 'mattn/emmet-vim'							" Emmet for HTML and CSS
+	Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
+	Plug 'preservim/nerdtree'						" File explorer
+call plug#end()
+
+nnoremap <C-S-b> :NERDTreeToggle<CR>

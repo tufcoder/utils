@@ -11,7 +11,10 @@ alias bc="vim $HOME/.bash_configs"
 alias vi="vim -u NONE"
 alias vrc="vim $HOME/.vim/vimrc"
 
-# some more ls aliases (from .bashrc)
+# some more ls aliases (from Ubuntu ~/.bashrc)
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias cl="clear"
 
 # python3
