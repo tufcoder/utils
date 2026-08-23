@@ -31,8 +31,21 @@ keymap("n", "<leader>e", "<cmd>Neotree toggle left<CR>", { desc = "Toggle Neo-tr
 keymap("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Aba anterior" })
 keymap("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Próxima aba" })
 
--- Fechar a aba atual
-keymap("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Fechar aba atual" })
+-- Fechar o buffer atual com segurança (sem fechar o Neovim se for o último)
+keymap("n", "<leader>bd", function()
+  local current_buf = vim.api.nvim_get_current_buf()
+  local listed_bufs = vim.tbl_filter(function(buf)
+    return vim.bo[buf].buflisted
+  end, vim.api.nvim_list_bufs())
+
+  if #listed_bufs > 1 then
+    vim.cmd("bprevious")
+    vim.api.nvim_buf_delete(current_buf, { force = false })
+  else
+    vim.cmd("enew")
+    vim.api.nvim_buf_delete(current_buf, { force = false })
+  end
+end, { desc = "Fechar buffer atual com segurança" })
 
 -- Mapeamentos para o LSP
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Ações de Código" })
