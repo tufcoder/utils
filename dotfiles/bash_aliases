@@ -1,0 +1,18 @@
+# bashrc
+alias brc="vim $HOME/.bashrc"
+
+# bash_aliases
+alias ba="vim $HOME/.bash_aliases"
+
+# bash_configs
+alias bc="vim $HOME/.bash_configs"
+
+# vim
+alias vi="vim -u NONE"
+alias vrc="vim $HOME/.vim/vimrc"
+
+# some more ls aliases (from .bashrc)
+alias cl="clear"
+
+# python3
+alias python="python3"
