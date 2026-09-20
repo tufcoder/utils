@@ -45,7 +45,7 @@ return {
         }),
         -- Fontes que vão aparecer no menu (em ordem de prioridade)
         sources = cmp.config.sources({
-          { name = "nvim-lsp" }, -- 1º sugestões do código (LSP)
+          { name = "nvim_lsp" }, -- 1º sugestões do código (LSP)
           { name = "buffer" },   -- 2º palavras do arquivo
           { name = "path" },     -- 3º caminhos de arquivos
         }),

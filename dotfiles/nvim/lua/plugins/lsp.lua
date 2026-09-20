@@ -1,37 +1,32 @@
 return {
-  -- 1. Plugin que ensina o lua_ls sobre as globais do Neovim ('vim', APIs, plugins, etc.)
+  -- 1. Plugin que ensina o lua_ls sobre as globais do Neovim
   {
     "folke/lazydev.nvim",
-    ft = "lua", -- carrega apenas quando abrir arquivos Lua
+    ft = "lua",
     opts = {
       library = {
-        -- Carrega os tipos das variávies e plugins
         { path = "luvit-meta/library", words = { "vim%.uv" } },
       },
     },
   },
 
-  -- 2. O gerenciador de servidores LSP
+  -- 2. O gerenciador de servidores LSP (Carregamento garantido)
   {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
-  },
-
-  -- 3. A ponte que gerencia e ativa os servidores automaticamente
-  {
-    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    lazy = false,
     dependencies = {
       "williamboman/mason.nvim",
-      "neovim/nvim-lspconfig",
-      "folke/lazydev.nvim", -- Adicionado aqui como dependência
+      "williamboman/mason-lspconfig.nvim",
+      "folke/lazydev.nvim",
     },
     config = function()
+      -- Inicializa o Mason primeiro
+      require("mason").setup()
+
       local lspconfig = require("lspconfig")
       local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      -- Sua função on_attach com os atalhos
+      -- Função on_attach com os seus atalhos
       local on_attach = function(_, bufnr)
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Ir para Definição" })
         vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Mostrar Informações" })
@@ -41,6 +36,7 @@ return {
         vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = bufnr, desc = "Ver referências" })
       end
 
+      -- Configuração do mason-lspconfig unificada
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
@@ -49,9 +45,11 @@ return {
           "clangd",
           "intelephense",
           "pyright",
+          "emmet_language_server",
+          "jdtls"
         },
         handlers = {
-          -- Handler Padrão: Configura todos os servidores genéricos
+          -- Handler Padrão para os servidores genéricos
           function(server_name)
             lspconfig[server_name].setup({
               capabilities = lsp_capabilities,
@@ -67,7 +65,6 @@ return {
               settings = {
                 Lua = {
                   diagnostics = {
-                    -- Remove o aviso 'undefined global vim'
                     globals = { "vim" },
                   },
                   workspace = {
@@ -78,13 +75,24 @@ return {
               },
             })
           end,
+
+          -- Handler Específico para o Emmet
+          ["emmet_language_server"] = function()
+            lspconfig.emmet_language_server.setup({
+              capabilities = lsp_capabilities,
+              on_attach = on_attach,
+              filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "php" },
+              init_options = {
+                html = {
+                  options = {
+                    ["bem.enabled"] = true,
+                  },
+                },
+              },
+            })
+          end,
         },
       })
     end,
-  },
-
-  -- 4. LSP Config base
-  {
-    "neovim/nvim-lspconfig",
   },
 }
